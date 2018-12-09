@@ -139,7 +139,6 @@ require('dotenv').config();
     // 色
     var colorPair = res[s][13];
     var colorPairs = colorPair.split("\n");
-    console.log(colorPairs);
     var colorType = "ホワイト系";
     var colorName = "off-white";
     await page.waitForSelector('.bmm-c-table__tr > .bmm-c-table__td > .cse-set > .itemedit-colorsize-btnwrap--2 > .js-popup-color-size');
@@ -147,7 +146,6 @@ require('dotenv').config();
 
     for(var j = 0; j < colorPairs.length; j++) {
       await page.waitForSelector('.csp-color-select__bubble > .csp-color-select__main > .js-color-size-color-wrapper > .csp-color-select__color-box > .csp-color-select__color-type')
-      console.log(page.evaluate( () => document.querySelectorAll('.csp-color-select__bubble > .csp-color-select__main > .js-color-size-color-wrapper > .csp-color-select__color-box > .csp-color-select__color-type')))
       var colors = await page.evaluate(optionSelector => {
         return Array.from(document.querySelectorAll('.csp-color-select__bubble > .csp-color-select__main > .js-color-size-color-wrapper > .csp-color-select__color-box > .csp-color-select__color-type'))
                   .map(o => {
@@ -477,7 +475,6 @@ require('dotenv').config();
     // 買付地
     var landPurchase = res[s][9];
     var landPurchases = landPurchase.split(":");
-    console.log(landPurchases);
 
     if(landPurchases[0] == "国内") {
       // 1回目の地域選択！
@@ -681,8 +678,6 @@ require('dotenv').config();
       }
     }
     
-      // スクショ確認
-      await page.screenshot({ path: './categorychoiced.png', fullPage: true });
     // 出品---------
     
 
