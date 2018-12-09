@@ -682,19 +682,18 @@ require('dotenv').config();
     
 
     // 下書き
-    await page.waitForSelector('#chkForm > .bmm-l-sec > .bmm-l-area > .bmm-c-box-center > #draftButton');
+    //await page.waitForSelector('#chkForm > .bmm-l-sec > .bmm-l-area > .bmm-c-box-center > #draftButton');
     await page.click('#chkForm > .bmm-l-sec > .bmm-l-area > .bmm-c-box-center > #draftButton');
     console.log('下書きを保存');
     
-    page.waitForNavigation();
+    //page.waitForNavigation();
     await page.waitForSelector('.n_PageArea > .n_MySection > .fab-design-mg--lr30 > .fab-design-mg--t20 > .fab-button')
     await page.click('.n_PageArea > .n_MySection > .fab-design-mg--lr30 > .fab-design-mg--t20 > .fab-button')
     console.log("出品リストへ戻る");
     
-    page.waitForNavigation();
+    //page.waitForNavigation();
     await page.waitForSelector('div > .my-page-menu > ul > li:nth-child(5) > a')
     await page.click('div > .my-page-menu > ul > li:nth-child(5) > a')
-    page.waitForNavigation();
 
   // 出品ルーティン終了
   }
