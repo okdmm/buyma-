@@ -705,7 +705,8 @@ require('dotenv').config();
   }
   //// カテゴリ
 
+  console.log("出品完了");
 
-  //await browser.close();
+  await browser.close();
 })();
 
