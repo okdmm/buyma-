@@ -1,0 +1,5 @@
+node_modules/
+img/
+.env
+*.png
+*.csv
